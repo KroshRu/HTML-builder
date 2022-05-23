@@ -4,8 +4,14 @@ const path= require('path');
 let components = [];
 let file_names=[];
 let components_name = [];
-fs.rmSync(path.join(__dirname,'project-dist'), { recursive: true, force: true });
 
+(async ()=>{
+
+fs.rmSync(path.join(__dirname,'project-dist'), {recursive: true, force: true}, (error) => {
+    if (error)
+       console.log(error);
+})
+})();
 
 //читаем template и компонентс
 

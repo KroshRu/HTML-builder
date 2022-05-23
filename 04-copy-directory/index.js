@@ -5,10 +5,8 @@ const path= require('path');
  let x=await fs.rm(path.join(__dirname,'files-copy'), {recursive: true, force: true}, (error) => {
    if (error)
       console.log(error);
-      console.log('удалили');
         //создаем папку
         fs.mkdir(path.join(__dirname,'files-copy'), (err) => {
-            console.log('создали папку');
         if (err) {
             if (!(err.errno==='-17')) {}
             else
